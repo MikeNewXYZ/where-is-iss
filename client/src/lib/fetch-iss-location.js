@@ -1,5 +1,5 @@
 async function fetchIssLocation() {
-	const response = await fetch("http://localhost:3000/", {
+	const response = await fetch("server-production-3ba6.up.railway.app", {
 		method: "POST",
 		headers: {
 			"Content-Type": "application/json",
