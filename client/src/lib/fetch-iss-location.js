@@ -1,10 +1,13 @@
 async function fetchIssLocation() {
-	const response = await fetch("server-production-3ba6.up.railway.app", {
-		method: "POST",
-		headers: {
-			"Content-Type": "application/json",
+	const response = await fetch(
+		"https://server-production-3ba6.up.railway.app",
+		{
+			method: "POST",
+			headers: {
+				"Content-Type": "application/json",
+			},
 		},
-	});
+	);
 
 	if (response.ok) {
 		const { latitude, longitude } = await response.json();
