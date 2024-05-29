@@ -2,12 +2,44 @@
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
-		<link rel="icon" type="image/svg+xml" href="/vite.svg" />
+		<link rel="icon" type="image/png" href="/iss.png" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Where is ISS?</title>
 	</head>
-	<body>
-		<main class="text-4xl">hello world</main>
+	<body class="relative h-[100dvh] w-full overflow-hidden bg-black text-white">
+		<!-- Landing Element -->
+		<main
+			class="flex h-full w-full flex-col items-center justify-center text-center font-mono uppercase sm:pb-10"
+		>
+			<h1 class="text-4xl font-bold">The ISS is currently at:</h1>
+			<p id="iss-location" class="mt-2 text-2xl"></p>
+
+			<button
+				id="map-button"
+				class="mt-6 border-2 border-white bg-black px-3 py-2 font-mono text-sm uppercase hover:scale-105 active:scale-95"
+			>
+				see where that is on a map
+			</button>
+		</main>
+
+		<!-- Map Modal Element -->
+		<div
+			id="map-modal"
+			class="fixed left-0 top-0 z-50 h-full w-full cursor-pointer"
+			style="display: none"
+		>
+			<div class="flex h-full w-full items-center justify-center px-2 sm:pb-10">
+				<div
+					id="map"
+					class="h-96 w-full select-none border-4 border-black sm:w-96"
+				></div>
+			</div>
+
+			<div
+				class="absolute left-0 top-0 -z-10 h-full w-full bg-black opacity-50"
+			></div>
+		</div>
+
 		<script type="module" src="/main.js"></script>
 	</body>
 </html>
