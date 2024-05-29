@@ -12,7 +12,7 @@ async function fetchIssLocation() {
 		return { latitude, longitude };
 	} else {
 		const error = await response.text();
-		alert(error);
+		console.error(error);
 	}
 }
 
